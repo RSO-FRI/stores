@@ -1,23 +1,23 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: image-catalog-deployment
+  name: store-data-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: image-catalog
+      app: store-data
   template:
     metadata:
       labels:
-        app: image-catalog
+        app: store-data
     spec:
       containers:
-        - image: i4mm4i/store-data:2022-12-04-13-56-04
+        - image: i4mm4i/store-data:2022-12-04-14-20-15
           name: store-data
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-              value: jdbc:postgresql://ella.db.elephantsql.com:5432/zqjqqtrd
+              value: jdbc:postgresql://ella.db.elephantsql.com:5432/tgaxlxwp
             - name: KUMULUZEE_DATASOURCES0_USERNAME
               value: tgaxlxwp
             - name: KUMULUZEE_DATASOURCES0_PASSWORD
@@ -47,7 +47,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: image-catalog
+  name: store-data
 spec:
   type: LoadBalancer
   ports:
@@ -55,4 +55,4 @@ spec:
       protocol: TCP
       targetPort: server
   selector:
-    app: image-catalog
+    app: store-data
