@@ -8,20 +8,20 @@ kumuluzee:
     http:
       port: 8080
   datasources:
-    - jndi-name: jdbc/ImageMetadataDS
-      connection-url: jdbc:postgresql://localhost:5432/image-metadata
+    - jndi-name: jdbc/StoreDataDS
+      connection-url: jdbc:postgresql://localhost:5432/store-data
       username: dbuser
       password: postgres
       max-pool-size: 20
   health:
     checks:
       data-source-health-check:
-        jndi-name: jdbc/ImageMetadataDS
+        jndi-name: jdbc/StoreDataDS
         type: liveness
   metrics:
     web-instrumentation:
-      - name: images-endpoint
-        url-pattern: /v1/images/*
+      - name: stores-endpoint
+        url-pattern: /v1/stores/*
   logs:
     config-file: '<?xml version="1.0" encoding="UTF-8"?>
                           <Configuration name="comments">

@@ -78,11 +78,11 @@
                 <version>${kumuluzee-config-mp.version}</version>
             </dependency>
 
-            <dependency>
+            <!--<dependency>
                 <groupId>com.kumuluz.ee.config</groupId>
                 <artifactId>kumuluzee-config-consul</artifactId>
                 <version>${kumuluzee-config.version}</version>
-            </dependency>
+            </dependency>-->
 
             <dependency>
                 <groupId>com.kumuluz.ee.health</groupId>
