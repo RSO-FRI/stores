@@ -13,17 +13,17 @@ spec:
         app: image-catalog
     spec:
       containers:
-        - image: prporso/image-catalog:2022-11-14-12-45-13
-          name: image-catalog
+        - image: i4mm4i/store-data:2022-12-04-13-56-04
+          name: store-data
           env:
             - name: KUMULUZEE_DATASOURCES0_CONNECTIONURL
-              value: jdbc:postgresql://fanny.db.elephantsql.com:5432/zqjqqtrd
+              value: jdbc:postgresql://ella.db.elephantsql.com:5432/zqjqqtrd
             - name: KUMULUZEE_DATASOURCES0_USERNAME
-              value: zqjqqtrd
+              value: tgaxlxwp
             - name: KUMULUZEE_DATASOURCES0_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: pg-pass
+                  name: pg-pass-store
                   key: KUMULUZEE_DATASOURCES0_PASSWORD
           ports:
             - containerPort: 8080
