@@ -53,8 +53,8 @@ Value: true or false
 kubectl version
 kubectl --help
 kubectl get nodes
-kubectl create -f image-catalog-deployment.yaml 
-kubectl apply -f image-catalog-deployment.yaml 
+kubectl create -f store-data-deployment.yaml 
+kubectl apply -f store-data-deployment.yaml 
 kubectl get services 
 kubectl get deployments
 kubectl get pods
